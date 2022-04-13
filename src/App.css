@@ -1,0 +1,28 @@
+.App
+{
+    width: 100%;
+}
+button
+{
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin: 10px 0px;
+}
+button:hover
+{
+    cursor: pointer;
+}
+.App button
+{
+    text-transform: capitalize;
+}
+ul
+{
+    margin: auto;
+}
+li img
+{
+    width: 50%;
+    display: block;
+
+}

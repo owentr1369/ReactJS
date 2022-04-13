@@ -15,9 +15,9 @@ function Content() {
         })
     }, [type])
   return (
-  <div>
+  <div className='App'>
       {tabs.map(tab =>(
-          <button 
+          <button className='app-button' 
           key={tab}
           style={type===tab?
             {
@@ -31,13 +31,9 @@ function Content() {
               {tab}
           </button>
       ))}
-    <input
-    value = {title}
-    onChange = {e=> setTitle(e.target.value)}
-    />
     <ul>
         {posts.map(post => (
-            <li
+            <li key={post.id} className='list'
             style={
                 {
                     display:'block',
@@ -45,8 +41,10 @@ function Content() {
                     fontSize: '15px',
                     color: '#333'
                 }
-            }
-            key={post.id}>{post.title || post.name}
+            }>
+                <div>
+                {post.title || post.name}
+                </div> 
                 <img key={post.id} src={post.url}></img>
             </li>
         ))}
